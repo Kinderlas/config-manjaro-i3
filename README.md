@@ -43,7 +43,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch
 [archlinuxcn]  
 SigLevel = Optional TrustAll  
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch  
-``` 
+```
 更新系统到最新  
 `sudo pacman -Syu`  
 

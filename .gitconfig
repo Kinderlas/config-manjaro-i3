@@ -1,0 +1,23 @@
+[user]
+	name = kinderlas
+	email = Kinderlas@gmail.com
+[http]
+	proxy = socks5://127.0.0.1:1080
+[https]
+	proxy = socks5://127.0.0.1:1080
+[alias]
+  br = branch
+  st = status -sb
+  cm = commit
+  mg = merge
+  cmm = commit -m
+  acmm = commit -am
+  co = checkout
+  cob = checkout -b
+  ps = push
+  pl = pull
+  dc = diff -cached
+  a = add -p
+  plog = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  tlog = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
