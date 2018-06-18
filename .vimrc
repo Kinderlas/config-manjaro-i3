@@ -49,8 +49,8 @@ set ruler
 set showcmd 
 
 "show tab
-set list
-set listchars=tab:>- 
+"set list
+"set listchars=tab:>- 
 
 if has("autocmd")
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
