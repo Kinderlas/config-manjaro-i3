@@ -15,10 +15,7 @@ check sha1\sha256
 使用工具[rufus][2]来制作镜像, 比较傻瓜就略过了
 
 ### 安装linux
-使用镜像启动,
-![2018-06-18-135805_1378x1097_scrot](/home/kinderlas/Pictures/2018-06-18-135805_1378x1097_scrot.png)
-
-其中要改的的是语言和驱动, 最好选闭源的驱动, 语言看喜好
+使用镜像启动后能看到选择界面, 其中要改的的是语言和驱动, 最好选闭源的驱动, 语言看喜好
 
 选完了然后选中boot回车就行了
 
@@ -108,18 +105,21 @@ python包:
 #### 微信 qq office
 可以用crossover中的qq或者tim
 但是微信没有很好的解决方案, 可以使用web版微信
-不过最简单的方法是虚拟机
+不过最简单的方法还是虚拟机开共享文件夹, 记得要装增强功能
 
 #### 虚拟机的iso源:
 `https://msdn.itellyou.cn/`
 
 ### 配置:
-配置上传到[github][3]了,仅供参考
+配置上传到[github][3]了,仅供参考, 以下为对该配置的说明
 
 #### git
+
+自行修改用户名和邮箱及ssh备注
+
 ```
 git config --global user.name kinderlas
-git config --global user.email kinderlas@gmail.com
+git config --global user.email kinderlas@mail.com
 ssh-keygen -C 'kinderlas@manjaro'
 git config --global http.proxy 'socks5://127.0.0.1:1080'
 git config --global https.proxy 'socks5://127.0.0.1:1080'
