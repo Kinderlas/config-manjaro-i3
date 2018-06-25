@@ -76,6 +76,33 @@ oh-my-zsh
 
 #### 输入法
 `sudo pacman -S fcitx-im fcitx-configtool fcitx-cloudpinyin fcitx-rime fcitx-skin-material`  
+添加輸入法：新建文件`~/.config/fcitx/rime/default.custom.yaml`
+```
+patch:
+  schema_list:
+    - schema: luna_pinyin          # 朙月拼音
+    - schema: luna_pinyin_simp     # 朙月拼音 简化字模式
+    - schema: luna_pinyin_tw       # 朙月拼音 臺灣正體模式
+    - schema: terra_pinyin         # 地球拼音 dì qiú pīn yīn
+    - schema: bopomofo             # 注音
+    - schema: jyutping             # 粵拼
+    - schema: cangjie5             # 倉頡五代
+    - schema: cangjie5_express     # 倉頡 快打模式
+    - schema: quick5               # 速成
+    - schema: wubi86               # 五笔 86
+    - schema: wubi_pinyin          # 五笔拼音混合輸入
+    - schema: double_pinyin        # 自然碼雙拼
+    - schema: double_pinyin_mspy   # 微軟雙拼
+    - schema: double_pinyin_abc    # 智能 ABC 雙拼
+    - schema: double_pinyin_flypy  # 小鶴雙拼
+    - schema: wugniu               # 吳語上海話（新派）
+    - schema: wugniu_lopha         # 吳語上海話（老派）
+    - schema: sampheng             # 中古漢語三拼
+    - schema: zyenpheng            # 中古漢語全拼
+    - schema: ipa_xsampa           # X-SAMPA 國際音標
+    - schema: emoji                # emoji 表情
+```
+
 
 #### 工具组件类
 `sudo pacman -S aria2 feh xcompmgr mlocate typora`  
@@ -177,6 +204,15 @@ exec --no-startup-id fcitx
 exec --no-startup-id sslocal -c /opt/conf/ss.json --log-file /opt/logs/ss.log -d start --pid-file /opt/run/ss.pid  
 exec --no-startup-id nohup sh /opt/wallpaper/auto-change.sh > /dev/null 2>&1 &  
 ```
+
+#### 其他
+关闭机箱峰鸣
+
+`/etc/modprobe.d/nobeep.conf`
+```
+blacklist pcspkr
+```
+
 
 [0]: https://docs.google.com/document/d/1ImLV9Vl7ojfzyuUIbg4rf2h4xgX2ap2ditnYTqG9Pyo/edit?usp=sharing
 [1]: https://manjaro.org/community-editions/
