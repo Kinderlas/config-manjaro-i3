@@ -206,12 +206,8 @@ exec --no-startup-id nohup sh /opt/wallpaper/auto-change.sh > /dev/null 2>&1 &
 ```
 
 #### 其他
-关闭机箱峰鸣
-
-`/etc/modprobe.d/nobeep.conf`
-```
-blacklist pcspkr
-```
+**关闭机箱峰鸣**: echo 'blacklist pcspkr' > /etc/modprobe.d/nobeep.conf
+**vim 共享剪贴板**：默认的剪贴板的编译模式不支持，换成gvim或者vim-gtk
 
 
 [0]: https://docs.google.com/document/d/1ImLV9Vl7ojfzyuUIbg4rf2h4xgX2ap2ditnYTqG9Pyo/edit?usp=sharing
