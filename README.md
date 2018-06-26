@@ -76,6 +76,12 @@ oh-my-zsh
 
 #### 输入法
 `sudo pacman -S fcitx-im fcitx-configtool fcitx-cloudpinyin fcitx-rime fcitx-skin-material`  
+在.xprofile中加入
+```
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+```
 添加輸入法：新建文件`~/.config/fcitx/rime/default.custom.yaml`
 ```
 patch:
@@ -121,6 +127,9 @@ jetbrain 大礼包:
 `sudo pacman -S gitkraken visual-studio-code-bin autojump`  
 python包:  
 `sudo pacman -S python-matplotlib`  
+secureCrt:
+下载secureCrt的ubuntu16的64版本的tar包和`https://github.com/Kinderlas/config-manjaro-i3/blob/master/aur/scrt/PKGBUILD`放入一个文件夹，然后
+`makepkg -si`
 
 #### 其他
 `pacman -S netease-cloud-music virtualbox`  
@@ -182,6 +191,16 @@ plugins=(
 `[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh`  
 ####  快捷键  
 关于i3有一篇很棒的[博客][3], 我的配置里面把jkl;改成了hjkl, 默认的配置对我来说有点难以接受...  
+添加新的桌面
+```
+bindsym $mod+Mod1+1 workspace $ws11
+bindsym $mod+Ctrl+Mod1+1 move container to workspace $ws11
+bindsym $mod+Shift+Mod1+1 move container to workspace $ws11; workspace $ws11
+```
+使用命令`xprop | grep "WM_WINDOW_ROLE\|WM_CLASS" && echo "WM_CLASS(STRING) = \"NAME\", \"CLASS\""`来获取窗口信息
+绑定某个应用到固定桌面`assign [class="Chromium"] $ws`
+
+
 #### 自动换壁纸 
 /opt/wallpaper/auto-change.sh  
 ```  bash
