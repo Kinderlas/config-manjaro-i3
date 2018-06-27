@@ -120,7 +120,8 @@ patch:
 jdk:  
 `sudo pacman-S jdk8-openjdk`  
 jetbrain 大礼包:  
-`sudo pacman -S android-studio pycharm-community-edition intellij-idea-ultimate-edition`  
+`sudo pacman -S android-studio pycharm-community-edition intellij-idea-ultimate-edition`
+[主题包][4]
 炼丹:  
 `sudo pacman -S python-tensorflow-opt-cuda python-pytorch-cuda`  
 其他:  
@@ -225,11 +226,13 @@ exec --no-startup-id nohup sh /opt/wallpaper/auto-change.sh > /dev/null 2>&1 &
 ```
 
 #### 其他
-**关闭机箱峰鸣**: echo 'blacklist pcspkr' > /etc/modprobe.d/nobeep.conf
-**vim 共享剪贴板**：默认的剪贴板的编译模式不支持，换成gvim或者vim-gtk
+**关闭机箱峰鸣**: `echo 'blacklist pcspkr' > /etc/modprobe.d/nobeep.conf`
+
+**vim 共享剪贴板**：默认的剪贴板的编译模式不支持，换成`gvim`或者`vim-gtk`
 
 
 [0]: https://docs.google.com/document/d/1ImLV9Vl7ojfzyuUIbg4rf2h4xgX2ap2ditnYTqG9Pyo/edit?usp=sharing
 [1]: https://manjaro.org/community-editions/
 [2]: https://rufus.akeo.ie/?locale=zh_CN
 [3]: https://github.com/Kinderlas/config-manjaro-i3
+[4]: http://color-themes.com/?view=index
