@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # 找到某一个程序的类名
 alias xp='xprop | grep "WM_WINDOW_ROLE\|WM_CLASS" && echo "WM_CLASS(STRING) = \"NAME\", \"CLASS\""'
 alias hg='history | grep '
+alias vscode='code'
 # alias end #
 
 # autojump needed

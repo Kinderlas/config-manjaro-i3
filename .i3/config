@@ -145,7 +145,7 @@ set $ws2 2:chromium
 set $ws3 3
 set $ws4 4:intellij
 set $ws5 5:pycharm
-set $ws6 6
+set $ws6 6:vscode
 set $ws7 7
 set $ws8 8:scrt
 set $ws11 11:wechat
@@ -198,6 +198,7 @@ assign [class="Wine"] $ws11
 assign [class="jetbrains-idea"] $ws4
 assign [class="jetbrains-pycharm-ce"] $ws5
 assign [class="robo3t"] $ws12
+assign [class="code"] $ws6
 
 
 # Open specific applications in floating mode
