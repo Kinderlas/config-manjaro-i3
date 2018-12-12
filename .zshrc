@@ -101,10 +101,39 @@ source $ZSH/oh-my-zsh.sh
 # 找到某一个程序的类名
 alias xp='xprop | grep "WM_WINDOW_ROLE\|WM_CLASS" && echo "WM_CLASS(STRING) = \"NAME\", \"CLASS\""'
 alias hg='history | grep '
-alias vscode='code'
+alias wechat='/opt/deepinwine/apps/Deepin-WeChat/run.sh'
+alias pdcopy='xclip -selection clipboard'
+alias pdpaste='xclip -selection clipboard -o'
+
 # alias end #
 
 # autojump needed
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 # 避免找不到刚刚安装的程序
 zstyle ':completion:*' rehash true
+
+#alias for cnpm
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+  --cache=$HOME/.npm/.cache/cnpm \
+  --disturl=https://npm.taobao.org/dist \
+  --userconfig=$HOME/.cnpmrc"
+# sudo pacman -S unzip-iconv
+alias unzip="unzip -O cp936"
+
+export EDITOR="/usr/bin/vim"
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+alias -s png="viewnior"
+alias -s gif="viewnior"
+alias cat='bat'
+alias ping='prettyping --nolegend'
+export PATH=$PATH:/opt/apps/flutter/bin
+
+if [[ -z "$TMUX" ]] ;then
+    ID="`tmux ls | grep -m1 attached | cut -d: -f1`" # get the id of a deattached session
+    if [[ -z "$ID" ]] ;then # if not available create a new one
+        tmux new-session
+    else
+        tmux attach-session -t "$ID" # if available attach to it
+    fi
+fi
