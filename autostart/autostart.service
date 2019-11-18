@@ -1,0 +1,6 @@
+[Unit]
+Description=AutoExec
+[Service]
+ExecStart=/etc/autostart.sh
+[Install]
+WantedBy=multi-user.target
